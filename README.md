@@ -15,7 +15,9 @@ In the folder 'FastAPI_Docker' you can find all the files necessary to run a Fas
 
 
 In order to use the API you must input _genre_ and _platform_ values with initial uppercase (example: Comedy, Amazon), and the values min or season all in lower case (example: min, season). You can use this API passing the values as the examples below:
+
 http://127.0.0.1:8000/get_actor/Netflix,2020
+
 http://127.0.0.1:8000/get_max_duration/2018,Amazon,min
 
 ________________________
@@ -37,5 +39,7 @@ En la carpeta 'FastAPI_Docker' puedes encontrar todos los archivos necesarios pa
 
 
 Para utilizar la API debe introducir valores _genre_ y _platform_ con mayúsculas iniciales (ejemplo: Comedy, Amazon), y los valores min o season en minúsculas (ejemplo: min, season). Puede usar esta API para pasar los valores como los siguientes ejemplos:
+
 http://127.0.0.1:8000/get_actor/Netflix,2020
+
 http://127.0.0.1:8000/get_max_duration/2018,Amazon,min
