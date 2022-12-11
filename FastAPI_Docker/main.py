@@ -6,8 +6,6 @@ import pandas as pd
 
 app=FastAPI()
 
-Data_file = UploadFile('Data.json')
-
 @app.on_event('startup')
 async def startup():
 	global DATA
@@ -70,7 +68,7 @@ async def get_actor(platform:str,year=int):
 	     		'Actors': act[0]}
 	else:
 		response = 'No data available'
-	return response 
+	return response, data_act.shape[0]
 	
 	
 	
