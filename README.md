@@ -17,9 +17,7 @@ In order to use the API you must input _genre_ and _platform_ values with initia
 
 If you want to run this docker locally, you use the API passing the values as the examples below:
 
-http://127.0.0.1:8000/get_actor/Netflix,2020
-
-http://127.0.0.1:8000/get_max_duration/2018,Amazon,min
+http://127.0.0.1:8000/get_max_duration/2018,Hulu,min
 
 http://127.0.0.1:8000/docs
 
@@ -27,7 +25,7 @@ The API was also deployed using Mogenius, and can be accessed like this:
 
 https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/docs
 
-https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/get_max_duration/2018,Amazon,min
+https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/get_max_duration/2018,Hulu,min
 
 ________________________
 
@@ -48,8 +46,6 @@ En la carpeta 'FastAPI_Docker' puedes encontrar todos los archivos necesarios pa
 
 
 Para utilizar la API debe introducir valores _genre_ y _platform_ con mayúsculas iniciales (ejemplo: Comedy, Amazon), y los valores min o season en minúsculas (ejemplo: min, season). Puede usar esta API para pasar los valores como los siguientes ejemplos:
-
-http://127.0.0.1:8000/get_actor/Netflix,2020
 
 http://127.0.0.1:8000/get_max_duration/2018,Hulu,min
 
