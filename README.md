@@ -29,7 +29,6 @@ https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/docs
 
 https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/get_max_duration/2018,Amazon,min
 
-https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/get_actor/Netflix,2020
 ________________________
 
 # Proyecto individual 1
@@ -52,13 +51,13 @@ Para utilizar la API debe introducir valores _genre_ y _platform_ con mayúscula
 
 http://127.0.0.1:8000/get_actor/Netflix,2020
 
-http://127.0.0.1:8000/get_max_duration/2018,Amazon,min
+http://127.0.0.1:8000/get_max_duration/2018,Hulu,min
 
 http://127.0.0.1:8000/docs
 
 También fue hecho un deployment utilizando Mogenius, y se puede acceder a ella de la siguiente manera:
 https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/docs
 
-https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/get_max_duration/2018,Amazon,min
+https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/get_max_duration/2018,Hulu,min
 
-https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/get_actor/Netflix,2020
+
