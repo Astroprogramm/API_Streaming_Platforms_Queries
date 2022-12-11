@@ -15,9 +15,13 @@ async def startup():
 	
 @app.get('/get_max_duration/{year},{platform},{min_season}')
 async def get_max_duration(year:int,platform:str,min_season:str):
-	id_max_duration = DATA[(DATA.release_year==year) | (DATA.Platform==platform) | (DATA.duration_type==min_season)]
-	max_title= id_max_duration.title.loc[id_max_duration['duration_quantity'].idxmax()]
-	return max_title
+	id_max_duration = DATA[(DATA.release_year==year) & (DATA.Platform==platform) & (DATA.duration_type==min_season)]
+	if id_max_duration.shape[0]!=0:
+		max_title= id_max_duration.title.loc[id_max_duration['duration_quantity'].idxmax()]
+		response = {'Title': max_title}
+	else:
+		response = 'No data available'
+	return response
 
 @app.get('/get_count_plataform/{platform}')
 async def get_count_plataform(platform:str):
@@ -32,19 +36,15 @@ async def get_count_plataform(platform:str):
 @app.get('/get_listedin/{listed}')
 async def get_count_plataform(listed:str):
 	#Preparing the data to filter by each platform
-	Amazon_data = DATA[(DATA.Platform=='Amazon')]
-	Amazon= Amazon_data[Amazon_data.listed_in.str.contains(listed)]
+	Amazon = DATA[(DATA.Platform=='Amazon') & (DATA.listed_in.str.contains(listed))]
 
-	Disney_data = DATA[(DATA.Platform=='Disney')]
-	Disney = Disney_data[Disney_data.listed_in.str.contains(listed)]
+	Disney = DATA[(DATA.Platform=='Disney') & (DATA.listed_in.str.contains(listed))]
 
-	Hulu_data = DATA[(DATA.Platform=='Hulu')]
-	Hulu = Hulu_data[Hulu_data.listed_in.str.contains(listed)]
+	Hulu = DATA[(DATA.Platform=='Hulu') & (DATA.listed_in.str.contains(listed))]
 
-	Netflix_data = DATA[(DATA.Platform=='Netflix')]
-	Netflix = Netflix_data[Netflix_data.listed_in.str.contains(listed)]
+	Netflix = DATA[(DATA.Platform=='Netflix')& (DATA.listed_in.str.contains(listed))]
 	
-	#Getting the information we need:
+	#Getting the information needed:
 	repeated=int(Amazon.shape[0])
 	Sites=['Amazon','Disney','Hulu','Netflix']
 	count=0
@@ -61,12 +61,15 @@ async def get_count_plataform(listed:str):
 
 @app.get('/get_actor/{platform},{year}')
 async def get_actor(platform:str,year=int):
-	data_act = DATA[(DATA.release_year==year) | (DATA.Platform==platform)]
-	act = data_act.cast.mode()
-	reps = data_act.cast.value_counts()[0]
-	response = {'Plaform': platform,
-     		'Quantity': int(reps),
-     		'Actors': act[0]}
+	data_act = DATA[(DATA.release_year==year) & (DATA.Platform==platform)]
+	if data_act.shape[0]!=0:
+		act = data_act.cast.mode()
+		reps = data_act.cast.value_counts()[0]
+		response = {'Plaform': platform,
+	     		'Quantity': int(reps),
+	     		'Actors': act[0]}
+	else:
+		response = 'No data available'
 	return response 
 	
 	
