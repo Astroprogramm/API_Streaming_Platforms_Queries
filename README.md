@@ -21,6 +21,8 @@ http://127.0.0.1:8000/get_actor/Netflix,2020
 
 http://127.0.0.1:8000/get_max_duration/2018,Amazon,min
 
+http://127.0.0.1:8000/docs
+
 The API was also deployed using Mogenius, and can be accessed like this:
 https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/docs
 
@@ -51,7 +53,7 @@ http://127.0.0.1:8000/get_actor/Netflix,2020
 
 http://127.0.0.1:8000/get_max_duration/2018,Amazon,min
 
-http://127.0.0.1:8000/get_actor/docs
+http://127.0.0.1:8000/docs
 
 También fue hecho un deployment utilizando Mogenius, y se puede acceder a ella de la siguiente manera:
 https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/docs
