@@ -24,6 +24,7 @@ http://127.0.0.1:8000/get_max_duration/2018,Amazon,min
 http://127.0.0.1:8000/docs
 
 The API was also deployed using Mogenius, and can be accessed like this:
+
 https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/docs
 
 https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/get_max_duration/2018,Amazon,min
