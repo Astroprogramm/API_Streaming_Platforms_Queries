@@ -3,7 +3,6 @@ from typing import Optional
 from pydantic import BaseModel
 import shutil
 import pandas as pd
-from fastapi.responses import HTMLResponse
 
 app=FastAPI()
 
@@ -59,6 +58,16 @@ async def get_count_plataform(listed:str):
 	     'Quantity': repeated}
 	return response
 	
+
+@app.get('/get_actor/{platform},{year}')
+async def get_actor(platform:str,year=int):
+	data_act = DATA[(DATA.release_year==year) | (DATA.Platform==platform)]
+	act = data_act.cast.mode()
+	reps = data_act.cast.value_counts()[0]
+	response = {'Plaform': platform,
+     		'Quantity': int(reps),
+     		'Actors': act[0]}
+	return response 
 	
 	
 	
