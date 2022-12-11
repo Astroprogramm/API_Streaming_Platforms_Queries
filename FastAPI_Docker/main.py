@@ -27,8 +27,8 @@ async def get_count_plataform(platform:str):
 	films = data_platform[data_platform.duration_type=='min']
 	series = data_platform[data_platform.duration_type=='season']
 	response = {'Plaform': platform,
-             'Movies': films.shape[0],
-             'Series': series.shape[0]}
+		     'Movies': films.shape[0],
+		     'Series': series.shape[0]}
 	return response
 
 @app.get('/get_listedin/{listed}')
@@ -59,16 +59,16 @@ async def get_count_plataform(listed:str):
 
 @app.get('/get_actor/{platform},{year}')
 async def get_actor(platform:str,year=int):
-	data_act = DATA[(DATA.release_year==year) & (DATA.Platform==platform)]
+	data_act = DATA[(DATA.Platform==platform) & (DATA.release_year==year)]
 	if data_act.shape[0]!=0:
-		act = data_act.cast.mode()
-		reps = data_act.cast.value_counts()[0]
-		response = {'Plaform': platform,
-	     		'Quantity': int(reps),
-	     		'Actors': act[0]}
+	  act = data_act.cast.mode()
+	  reps = data_act.cast.value_counts()[0]
+	  response = {'Plaform': platform,
+	  'Quantity': int(reps),
+	  'Actors': act[0]}
 	else:
-		response = 'No data available'
-	return response, data_act.shape[0]
+	  response = 'No data available'
+	return response
 	
 	
 	

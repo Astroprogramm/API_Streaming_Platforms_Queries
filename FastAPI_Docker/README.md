@@ -17,3 +17,25 @@ In the folder 'FastAPI_Docker' you can find all the files necessary to run a Fas
 In order to use the API you must input _genre_ and _platform_ values with initial uppercase (example: Comedy, Amazon), and the values min or season all in lower case (example: min, season). You can use this API passing the values as the examples below:
 http://127.0.0.1:8000/get_actor/Netflix,2020
 http://127.0.0.1:8000/get_max_duration/2018,Amazon,min
+
+________________________
+
+# Proyecto individual 1
+Primer proyecto individual desarrollado en Henry, con enfoque en Ingeniería de Datos (ETL)
+
+Este repositorio presenta un ETL hecho en datasets de películas y series de 4 plataformas diferentes: Amazon, Disney Plus, Hulu y Netflix. Puede encontrar el notebook donde se realizó el ETL en la carpeta llamada 'Dataset_and_ETL' con la descripción del proceso, y también puede encontrar en la misma carpeta el dataset final para consultas en formato JSON. El notebook también contiene parte del código utilizado para realizar las consultas en un contenedor acoplable con FastAPI, Uvicorn y Tiangolo.
+
+En la carpeta 'FastAPI_Docker' puedes encontrar todos los archivos necesarios para ejecutar un FastAPI con uvicorn y tiangolo, que realiza las siguientes consultas:
+
++ Duración máxima según tipo de película (película/serie), plataforma y año. La solicitud es: get_max_duration(año, plataforma, [min o temporada])
+
++ Número de películas y series (por separado) por plataforma. La solicitud es: get_count_plataform(platform)  
+  
++ El número de veces que se repite un género y una plataforma. La petición es: get_listedin('género').
+
++ Actor que más se repite según la plataforma y el año. La petición es: get_actor(plataforma, año)
+
+
+Para utilizar la API debe introducir valores _genre_ y _platform_ con mayúsculas iniciales (ejemplo: Comedy, Amazon), y los valores min o season en minúsculas (ejemplo: min, season). Puede usar esta API para pasar los valores como los siguientes ejemplos:
+http://127.0.0.1:8000/get_actor/Netflix,2020
+http://127.0.0.1:8000/get_max_duration/2018,Amazon,min
