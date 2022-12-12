@@ -3,7 +3,7 @@ First individual project develop in Henry, with focus in Data Engineering (ETL)
 
 This repository presents an ETL done in datasets of movies and series from 4 different platforms: Amazon, Disney Plus, Hulu and Netflix. You can find the notebook where the ETL was performed in the folder named 'Dataset_and_ETL' with description of the process, and you can also find in the same folder the final dataset ready for queries in JSON format. The notebook also contains some of the code used to perform the queries in a docker container with FastAPI, Uvicorn and Tiangolo.
 
-In the folder 'FastAPI_Docker' you can find all the files necessary to run a FastAPI with uvicorn and tiangolo, which performs the following queries:
+Here you can find all the files necessary to run a FastAPI with uvicorn and tiangolo, which performs the following queries:
 
 + Maximum duration according to film type (film/series), platform and year. The request is: get_max_duration(year, platform, [min or season])
 
@@ -34,7 +34,7 @@ Primer proyecto individual desarrollado en Henry, con enfoque en Ingeniería de 
 
 Este repositorio presenta un ETL hecho en datasets de películas y series de 4 plataformas diferentes: Amazon, Disney Plus, Hulu y Netflix. Puede encontrar el notebook donde se realizó el ETL en la carpeta llamada 'Dataset_and_ETL' con la descripción del proceso, y también puede encontrar en la misma carpeta el dataset final para consultas en formato JSON. El notebook también contiene parte del código utilizado para realizar las consultas en un contenedor acoplable con FastAPI, Uvicorn y Tiangolo.
 
-En la carpeta 'FastAPI_Docker' puedes encontrar todos los archivos necesarios para ejecutar un FastAPI con uvicorn y tiangolo, que realiza las siguientes consultas:
+Aquí puedes encontrar todos los archivos necesarios para ejecutar un FastAPI con uvicorn y tiangolo, que realiza las siguientes consultas:
 
 + Duración máxima según tipo de película (película/serie), plataforma y año. La solicitud es: get_max_duration(año, plataforma, [min o temporada])
 
