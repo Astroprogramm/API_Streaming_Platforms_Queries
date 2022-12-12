@@ -9,7 +9,7 @@ Here you can find all the files necessary to run a FastAPI with uvicorn and tian
 
 + Number of films and series (separate) per platform. Request is: get_count_plataform(platform)
 
-+ The number of times a genre and platform is repeated most often. The request is: get_listedin('genre').
++ The number of times a genre and platform where is repeated most often. The request is: get_listedin(genre).
 
 + Actor that most repeats according to platform and year. The request is: get_actor(platform, year)
 
@@ -36,22 +36,22 @@ Este repositorio presenta un ETL hecho en datasets de películas y series de 4 p
 
 Aquí puedes encontrar todos los archivos necesarios para ejecutar un FastAPI con uvicorn y tiangolo, que realiza las siguientes consultas:
 
-+ Duración máxima según tipo de película (película/serie), plataforma y año. La solicitud es: get_max_duration(año, plataforma, [min o temporada])
++ Duración máxima según tipo de película (película/serie), plataforma y año. La solicitud es: get_max_duration(año, plataforma, [min o seasons])
 
-+ Número de películas y series (por separado) por plataforma. La solicitud es: get_count_plataform(platform)  
++ Número de películas y series (por separado) por plataforma. La solicitud es: get_count_plataform(plataforma)  
   
-+ El número de veces que se repite un género y una plataforma. La petición es: get_listedin('género').
++ El número de veces que se repite un género y la plataforma dónde más se repite. La petición es: get_listedin('género').
 
 + Actor que más se repite según la plataforma y el año. La petición es: get_actor(plataforma, año)
 
 
-Para utilizar la API debe introducir valores _genre_ y _platform_ con mayúsculas iniciales (ejemplo: Comedy, Amazon), y los valores min o season en minúsculas (ejemplo: min, season). Puede usar esta API para pasar los valores como los siguientes ejemplos:
+Para utilizar la API debe introducir valores _genero_ y _plataforma_ con mayúsculas iniciales (ejemplo: Comedy, Amazon), y los valores min o season en minúsculas (ejemplo: min, season). Si desea utilizar correr el docker localmente puede hacerlo pasando los parámetros así:
 
 http://127.0.0.1:8000/get_max_duration/2018,Hulu,min
 
 http://127.0.0.1:8000/docs
 
-También fue hecho un deployment utilizando Mogenius, y se puede acceder a ella de la siguiente manera:
+También fue hecho un deployment utilizando Mogenius, se puede acceder de la siguiente manera:
 https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/docs
 
 https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/get_max_duration/2018,Hulu,min
