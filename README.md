@@ -52,6 +52,7 @@ http://127.0.0.1:8000/get_max_duration/2018,Hulu,min
 http://127.0.0.1:8000/docs
 
 También fue hecho un deployment utilizando Mogenius, se puede acceder de la siguiente manera:
+
 https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/docs
 
 https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/get_max_duration/2018,Hulu,min
