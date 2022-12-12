@@ -45,7 +45,7 @@ Aquí puedes encontrar todos los archivos necesarios para ejecutar un FastAPI co
 + Actor que más se repite según la plataforma y el año. La petición es: get_actor(plataforma, año)
 
 
-Para utilizar la API debe introducir valores _genero_ y _plataforma_ con mayúsculas iniciales (ejemplo: Comedy, Amazon), y los valores min o season en minúsculas (ejemplo: min, season). Si desea utilizar correr el docker localmente puede hacerlo pasando los parámetros así:
+Para utilizar la API debe introducir valores _genero_ y _plataforma_ con mayúsculas iniciales (ejemplo: Comedy, Amazon), y los valores min o season en minúsculas (ejemplo: min, season). Si desea correr este docker localmente puede hacerlo pasando así los parámetros:
 
 http://127.0.0.1:8000/get_max_duration/2018,Hulu,min
 
