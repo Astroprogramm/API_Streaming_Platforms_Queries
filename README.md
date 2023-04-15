@@ -21,11 +21,11 @@ http://127.0.0.1:8000/get_max_duration/2018,Hulu,min
 
 http://127.0.0.1:8000/docs
 
-The API was also deployed using Mogenius, and can be accessed like this:
+The API was also deployed using Render, and can be accessed like this:
 
-https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/docs
+[https://movies-api-rjck.onrender.com/docs](https://movies-api-rjck.onrender.com/docs)
 
-https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/get_max_duration/2018,Hulu,min
+[https://movies-api-rjck.onrender.com/get_max_duration/2018,Hulu,min](https://movies-api-rjck.onrender.com/get_max_duration/2018,Hulu,min)
 
 ________________________
 
@@ -51,10 +51,10 @@ http://127.0.0.1:8000/get_max_duration/2018,Hulu,min
 
 http://127.0.0.1:8000/docs
 
-También fue hecho un deployment utilizando Mogenius, se puede acceder de la siguiente manera:
+También fue hecho un deployment utilizando Render, se puede acceder de la siguiente manera:
 
-https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/docs
+[https://movies-api-rjck.onrender.com/docs](https://movies-api-rjck.onrender.com/docs)
 
-https://query-app-prod-query-api-fxqxpr.mo5.mogenius.io/get_max_duration/2018,Hulu,min
+[https://movies-api-rjck.onrender.com/get_max_duration/2018,Hulu,min](https://movies-api-rjck.onrender.com/get_max_duration/2018,Hulu,min)
 
 
